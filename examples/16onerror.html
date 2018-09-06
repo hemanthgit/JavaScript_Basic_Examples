@@ -1,0 +1,15 @@
+<html>
+
+<body>
+    <script>
+        window.onerror = function (message, url, line) {
+            alert("Message : " + message + "\nURL : " + url + "\nLine Number : " + line);
+            // Return true to supress the browser error messages (like in older versions of Internet Explorer)
+            return true;
+        }
+
+        NonExistingFunction();
+    </script>
+</body>
+
+</html>

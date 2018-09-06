@@ -1,0 +1,34 @@
+<html>
+
+<body>
+    <script>
+        // Local Variables
+        function helloWorld() {
+            var greeting = "Hello"; // The variable 'greeting' is available in this function only.
+            greeting = greeting + " JavaScript";
+            alert(greeting);
+        }
+        helloWorld();
+        // alert(greeting); // Error : 'greeting' is not defined.
+
+        // Global Variables
+        var greeting = "Hello";
+        function helloWorld1() { // The variable greeting is available in the function 
+            greeting = greeting + " JavaScript";
+            alert(greeting);
+        }
+        helloWorld1();
+        alert(greeting);// valid
+
+// using a variable without declaration becomes global.
+        function helloWorld() {
+            // The variable greeting is not declared but a value is assigned. 
+            // So it will automatically become a global variable 
+            greeting = "Hello JavaScript";
+        }
+        helloWorld();
+        alert(greeting);
+    </script>
+</body>
+
+</html>

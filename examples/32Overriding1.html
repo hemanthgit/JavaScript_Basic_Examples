@@ -1,0 +1,21 @@
+<html>
+<head>
+        <script type="text/javascript" src="js/EmployeeScript.js"></script>
+</head>
+<body>
+    <script>
+        GetEmployeeDetails();
+
+        function GetEmployeeDetails() {
+            Employee.prototype.getName = function () {
+                return this.name.toUpperCase();
+            }
+            var e1 = new Employee("Varma");
+            var e2 = new Employee("Tech");
+            document.write("e1.name = " + e1.getName() + "<br/>");
+            document.write("e2.name = " + e2.getName() + "<br/>");
+        }
+    </script>
+</body>
+
+</html>

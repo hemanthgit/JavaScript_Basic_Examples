@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <script>
+        var employee = {
+            name: "John"
+        }
+        // Create a new variable and assign the employee object 
+        var newEmployee = employee;
+        // Change the name property of the employee object using the new variable 
+        newEmployee.name = "Mary";
+        // Notice that name is changed to Mary for original employee object
+        document.write("Using Literal Notation: "+employee.name);
+
+        var emp = function () {
+            this.name = "John";
+        } // Create an instance of employee 
+        // employee.name will return John 
+        var employee = new emp();
+        // Create an other instance of employee 
+        // newEmployee.name will return John 
+        var newEmployee = new emp();
+        // Change the name property of the newEmployee object 
+        newEmployee.name = "Mary";
+        // Notice that name is not changed to Mary for the original employee object, it is still John 
+        document.write("</br> Using Constructor Func:  "+employee.name);
+    </script>
+</body>
+
+</html>

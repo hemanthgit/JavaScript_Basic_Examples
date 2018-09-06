@@ -1,0 +1,25 @@
+Just like Java, JavaScript is also an object oriented programming language. 
+However, JavaScript is not very strict in reporting or throwing errors.
+
+For Ex, In Java, if you assign a value to a variable that is not declared, you get an error.
+Where as the same code in JavaScript does not raise any error. JavaScript automatically creates a global variable with that name. 
+This kind of a behaviour may lead the developer to make more mistakes. 
+
+Just like Java, if you want JavaScript also to throw an error, then use Strict Mode.
+How to enable strict mode in JavaScript ?
+    Just add "use strict" statement in your script file.
+
+if you specified "use strict" at the top of the JavaScript file, strictness will be enforced across the entire script file. 
+
+How to enforce JavaScript strictness in a specific function?
+ Just add "use strict" statement inside the function alone. 
+
+In JavaScript, if you assign a value to a read-only property, JavaScript silently fails without raising an error. refer 37ReadOnlyWithoutStrictness.html
+If you want JavaScript to raise an error instead of failing silently, use JavaScript strict mode. refer 37ReadOnlyWithStrictness.html
+
+Note:
+-----
+    ECMAScript version 5 introduced strict mode to JavaScript.
+    With strict mode ON it is easier to detect JavaScript silent errors as they would throw an error now. 
+    This makes debugging much easier and the chances of developers making mistakes is reduced. 
+    Most modern browsers support strict mode.

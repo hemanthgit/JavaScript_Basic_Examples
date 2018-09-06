@@ -1,0 +1,24 @@
+Basic loops in JavaScript:
+    while 
+    do...while
+    for
+
+While :
+    How does the while loop work ?
+    1. While loop checks the condition first 
+    2. If the condition is true, statements with in the loop are executed 
+    3. This process is repeated as long as the condition evaluates to true.
+
+    What is the use of break statement?
+    If break statement is used in a switch statement, it causes the execution to break out of that switch statement. 
+    In a similar fashion, if used in a loop, the loop ends. 
+
+    What is the use of  continue statement ?
+    continue statement tells the JavaScript interpreter to skip remaining code that is present after this statement and start the next iteration of the loop.
+do..while:
+    1. do while loop checks its condition at the end of the loop 
+    2. This means the do...while... loop is guaranteed to execute at least one time. 
+    3. In general, do...while... loops are used to present a menu to the user 
+ 
+For Loop:
+ -- Nothing

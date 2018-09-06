@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <script>
+        var greeting = "This is from global Variable";
+        helloWorld();
+        function helloWorld() {
+            document.write(greeting);
+            var greeting = "Hello from local variable"
+        }
+
+        var greeting = "This is from global Variable";
+        helloWorld();
+        function helloWorld() {
+            var greeting;
+            document.write(greeting);
+            greeting = "Hello from local variable"
+        }
+    </script>
+</body>
+
+</html>

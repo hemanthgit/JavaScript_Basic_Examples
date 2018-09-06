@@ -1,0 +1,43 @@
+<html>
+
+<body>
+    <script>
+        // Employee object has 4 public properties and 3 public functions.
+        var Employee = function (firstName, lastName, email) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+        }
+        Employee.prototype.getFullName = function () {
+            return this.firstName + " " + this.lastName;
+        }
+        Employee.prototype.getEmail = function () {
+            return this.email;
+        }
+        var employee = new Employee("Varma", "Tech", "vt@gmail.com");
+
+        // The following code retrieves all the public properties and methods
+        for (var property in employee) {
+            document.write(property + "<br/>");
+        }
+
+        // The following code retrieves all the public properties & functions along with their values
+        for (var property in employee) {
+            document.write(property + " : " + employee[property] + "<br/>");
+        }
+        // The following code retrieves only the public properties with values
+        for (var property in employee) {
+            if (typeof employee[property] != "function") {
+                document.write(property + " : " + employee[property] + "<br/>");
+            }
+        }
+        // The following code retrieves only the public functions
+        for (var property in employee) {
+            if (typeof employee[property] == "function") {
+                document.write(property + " : " + employee[property] + "<br/>");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+JavaScript code is executed in a linear fashion from the first line to the last line. 
+If for some reason you want to interrupt this flow and execute certain statements only, if certain condition is met, then we use conditional statements.
+
+JavaScript has the following conditional statements
+ if 
+ if else 
+ if elseif else 
+ switch ternary operator - shortcut for an if...else statement
+
+Switch:
+ When should we use switch statement?
+ To improve the readability of a program multiple if else if statements can be replaced with a switch statement.
+ In general we need to have break statement after each case statement to ensure the program breaks out of the switch statement after executing statements present in a specific case.
+What happens if there is no break in a switch statement? 
+ If there is no break statement the execution falls automatically to next case until a break statement is encountered or end of the program is reached. 
+
+Ternary operator:
+ It can be used as a shortcut for 'if...else...' statement.

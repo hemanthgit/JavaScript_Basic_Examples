@@ -1,0 +1,21 @@
+<html>
+
+<body>
+    <script>
+        var Employee = function (name) {
+            var _name = name;
+            Object.defineProperty(this, "name", {
+                get: function () {
+                    return _name;
+                }
+            });
+        }
+        var employee = new Employee("Mark");
+        // name is readonly property. It is an error to assign a value to a read-only property 
+        // JavaScript silently fails the following line without raising an error 
+        employee.name = "Mark M";
+        document.write(employee.name);
+    </script>
+</body>
+
+</html>

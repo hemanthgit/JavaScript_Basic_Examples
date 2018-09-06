@@ -1,0 +1,19 @@
+<html>
+
+<body>
+    <script>
+        function addNumbers() {
+            var sum = 0;
+            document.write("Count of numbers = " + arguments.length + "<br/>");
+            for (var i = 0; i < arguments.length; i++) {
+                sum = sum + arguments[i];
+            }
+            document.write("Sum of numbers = " + sum);
+            document.write("<br/><br/>");
+        }
+        addNumbers();
+        addNumbers(10, 20, 30);
+    </script>
+</body>
+
+</html>

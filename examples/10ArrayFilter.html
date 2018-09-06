@@ -1,0 +1,27 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var result = myArray.filter(IsEven);
+        document.write(result);
+
+        function IsEven(value, index, array) {
+            if (value % 2 == 0) { 
+                return true;
+            } 
+            else { 
+                return false; 
+            } 
+         }
+         //Anonymous function
+         var result1 = myArray.filter(function (v, i, a) { return v % 2 == 0 });
+         document.write("</br>"+result1);
+
+         
+    </script>
+</body>
+
+</html>

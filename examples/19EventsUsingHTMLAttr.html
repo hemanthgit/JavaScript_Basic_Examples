@@ -1,0 +1,24 @@
+<html>
+
+<body>
+<!-- associate an event handler to the event Using the attributes of an HTML tag -->
+    <input type="button" value="Mouse Over me" id="btn" 
+     onmouseover="changeColorOnMouseOver()"
+     onmouseout="changeColorOnMouseOut()"
+    />
+
+    <script>
+        function changeColorOnMouseOver() {
+            var control = document.getElementById("btn");
+            control.style.background = 'red';
+            control.style.color = 'yellow';
+        }
+        function changeColorOnMouseOut() {
+            var control = document.getElementById("btn");
+            control.style.background = 'black';
+            control.style.color = 'white';
+        }
+    </script>
+</body>
+
+</html>

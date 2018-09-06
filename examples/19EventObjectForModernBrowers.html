@@ -1,0 +1,18 @@
+<html>
+    <!-- This works only in above IE 8 and Modern versions. -->
+<input type="button" value="Click me" id="btn" 
+    onclick="displayEventDetails(event)" 
+    onmouseover="displayEventDetails(event)"
+    onmouseout="displayEventDetails(event)" />
+    <div id="resultDiv"></div>
+
+<body>
+    <script>
+        function displayEventDetails(event) {
+            var eventDetails = "Event = " + event.type + "<br/> X = " + event.clientX + "<br/>Y = " + event.clientY + "<br/>Target Type = " + event.target.type + "<br/> Target Tag Name = " + event.target.tagName;
+            document.getElementById("resultDiv").innerHTML = eventDetails;
+        }
+    </script>
+</body>
+
+</html>

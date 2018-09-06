@@ -1,0 +1,13 @@
+<html>
+<input type="button" value="Open popup" onclick="openPopup()" /> <input type="button" value="Close popup" onclick="closePopup()"
+/>
+<script type="text/javascript"> 
+    var popup;
+    function openPopup() {
+        popup = window.open("http://google.com", "My Window", "height=300,width=300")
+    } function closePopup() {
+        popup.close();
+    } 
+</script>
+
+</html>

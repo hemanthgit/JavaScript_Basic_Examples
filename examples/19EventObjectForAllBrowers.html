@@ -1,0 +1,26 @@
+<html>
+<!-- This works for all browers. -->
+
+<body>
+    <input type="button" value="Click me" id="btn" 
+        onclick="displayEventDetails(event)" 
+        onmouseover="displayEventDetails(event)"
+        onmouseout="displayEventDetails(event)" />
+    <div id="resultDiv"></div>
+    <script>
+        function displayEventDetails(event) {
+            var sourceElement;
+            if (event.srcElement) {
+                sourceElement = event.srcElement;
+            }
+            else {
+                sourceElement = event.target;
+            }
+            alert(sourceElement);
+            var eventDetails = "Event = " + event.type + "<br/> X = " + event.clientX + "<br/>Y = " + event.clientY + "<br/>Target Type = " + sourceElement.type + "<br/>Target Tag Name = " + sourceElement.tagName;
+            document.getElementById("resultDiv").innerHTML = eventDetails;
+        }
+    </script>
+</body>
+
+</html>

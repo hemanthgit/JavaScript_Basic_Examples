@@ -1,0 +1,47 @@
+Function:
+---------
+    A function is a block of reusable code.
+    A function allows us to write code once and use it as many times as we want just by calling the function.
+    syntax:
+         function functionName(parameter1, parameter2,..parameter_n){ 
+             //function statements 
+            }
+    Points to remember:
+     1. Use the function keyword to define a function, followed by the name of the function. 
+     2. The name of the function should be followed by parentheses ().
+     3. Function parameters are optional. 
+    Note:
+     The parameters that are with missing values are set to undefined.
+    
+    Should a javascript function always return a value?
+     No, They don't have to.
+     It totally depends on what you want the function to do.
+     If an explicit return is omitted from function ,then undefined is returned automatically. 
+
+     Function Hoisting : 
+        By default, JavaScript moves all the function declarations to the top of the current scope.
+        This is called function hoisting. 
+        This is the reason JavaScript functions can be called before they are declared.
+    
+    Note: Functions defined using a "function expression" are not hoisted.
+          this means a function defined using a function expression can only be called after it has been defined
+
+    Defining function using a function expression:
+        A Function Expression allows us to define a function using an expression (typically by assigning it to a variable). 
+        There are 3 different ways of defining a function using a function expression.
+            1.Anonymous function expression.
+            2.Named function expression.
+            3.Self invoking function expression.
+                 These are called with different names:
+                 3a) Immediately-Invoked Function Expression (IIFE).
+                 3b) Self-executing anonymous functions.
+                 3c) Self-invoked anonymous functions.
+        
+        Anonymous function expression:
+            1.Creating a function without a name and assigning it to variable. 
+            2.We use the name of the variable to invoke the function.         
+        Named function expression:  : 
+            1. Here instead of assigning the variable to an anonymous function, we’re assigning it to a named function.
+            2. The name of the function is available only with in the same function. 
+            3. This syntax is useful for creating recursive functions.
+            4. If you use this method outside of the function it raises undefined error. 

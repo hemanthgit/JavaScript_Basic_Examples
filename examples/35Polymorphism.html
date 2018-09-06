@@ -1,0 +1,31 @@
+<html>
+
+<body>
+    <script>
+        var Shape = function () { }
+        Shape.prototype.draw = function () {
+            return "I am a generic shape";
+        }
+        // Create a Circle object 
+        var Circle = function () { }
+        // Make shape the parent for Circle 
+        Circle.prototype = Object.create(Shape.prototype);
+        // Circle object overrides draw() method 
+        Circle.prototype.draw = function () {
+            return "I am a circle";
+        }
+        var Square = function () { }
+        Square.prototype = Object.create(Shape.prototype);
+        Square.prototype.draw = function () {
+            return "I am a square";
+        }
+        var Triangle = function () { }
+        Triangle.prototype = Object.create(Shape.prototype);
+        var shapes = [new Shape(), new Circle(), new Square(), new Triangle()];
+        shapes.forEach(function (val) {
+            document.write(val.draw() + "<br/>")
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="js/BranchA.js"></script>
+    <script type="text/javascript" src="js/BranchB.js"></script>
+</head>
+
+<body>
+    <div id="BranchADiv"></div>
+    <div id="BranchBDiv"></div>
+    <script type="text/javascript"> 
+        document.getElementById("BranchADiv").innerHTML = new student("Varma", "Tech").getFullName();
+        document.getElementById("BranchBDiv").innerHTML = new student("Varma", "Tech","Institute").getFullName();  
+    </script>
+</body>
+
+</html>

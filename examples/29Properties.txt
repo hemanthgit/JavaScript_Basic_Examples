@@ -1,0 +1,8 @@
+Properties:
+----------------
+    Since JavaScript is also an object oriented programming language, objects in JavaScript can also have properties. 
+Why do we need properties when we have public fields?
+    Encapsulation is one of the pillars of object oriented programming language. 
+    Properties provide encapsulation. 
+    If you use public fields you cannot control on what is assigned and returned from that public field.
+

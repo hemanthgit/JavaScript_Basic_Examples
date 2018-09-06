@@ -1,0 +1,37 @@
+<html>
+
+<body>
+    <script>
+        var Employee = function (firstName, lastName, email) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+        }
+        var employee = new Employee("Varma", "Tech", "vt@gmail.com");
+        var PermanentEmployee = function (annualSalry) {
+            this.annualSalary = annualSalry;
+        }
+
+        PermanentEmployee.prototype = employee;
+        var pe = new PermanentEmployee(50000);
+        for (var property in pe) {
+            document.write(property + " : " + pe[property] + "<br/>");
+        }
+        // The following code retrieves only the public members that are defined in the PermanentEmployee object.
+        document.write("##### Public members of Child Only ###### <br/>");
+        for (var property in pe) {
+            if (pe.hasOwnProperty(property)) {
+                document.write(property + " : " + pe[property] + "<br/>");
+            }
+        }
+        // The following code retrieves only the public members inherited from the parent object.
+        document.write("##### Public members of Parent Only ###### <br/>");
+        for (var property in pe) {
+            if (!pe.hasOwnProperty(property)) {
+                document.write(property + " : " + pe[property] + "<br/>");
+            }
+        }
+    </script>
+</body>
+
+</html>

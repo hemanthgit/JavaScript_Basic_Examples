@@ -1,0 +1,22 @@
+Is JavaScript case sensitive?
+     Yes, JavaScript is case sensitive programming language.
+      Variable names, keywords, methods, object properties and event handlers all are case sensitive.
+Comments in JavaScript 
+    1) Single Line Comment.
+    2) Multi Line Comment.
+Data types in JavaScript
+    The following are the different data types in JavaScript 
+    Numbers - 5, 5.234 
+    Boolean - true / false 
+    String - "MyString", 'MyString'
+To create a variable in JavaScript use 'var' keyword. 
+    Variable names are case sensitive.
+With JavaScript we always use var keyword to create any type of variable. 
+Based on the value assigned the type of the variable is inferred.
+    var a = 10; 
+    var b = "VarmaTech";
+JavaScript is a dynamically typed language. This means JavaScript data types are converted automatically as needed during script execution.
+When a + operator is used with 2 numbers, JavaScripts adds those numbers.
+When a + operator is used with 2 strings, JavaScript concatenates those 2 strings.
+When a + operator is used with a string and a number, JavaScript converts the numeric value to a string and performs concatenation.
+But if you use a - operator, numeric value is not converted to string.

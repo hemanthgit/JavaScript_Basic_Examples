@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <script>
+            var Animal = function() {
+        if (this.constructor === Animal) {
+          throw new Error("Can't instantiate abstract class!");
+        }
+    };
+
+    Animal.prototype.say = function() {
+        throw new Error("Abstract method!");
+    }
+
+    var Cat = function() {
+        Animal.apply(this, arguments);
+    };
+    Cat.prototype = Object.create(Animal.prototype);
+    Cat.prototype.constructor = Cat;
+
+    Cat.prototype.say = function() {
+        console.log('meow');
+    }
+
+    var Dog = function() {
+        Animal.apply(this, arguments);
+    };
+    Dog.prototype = Object.create(Animal.prototype);
+    Dog.prototype.constructor = Dog;
+
+    Dog.prototype.say = function() {
+        console.log('bow bow');
+    }
+
+    var cat = new Cat();
+    var dog = new Dog();
+
+    cat.say();
+    dog.say();
+
+        </script>
+    </body>
+</html>

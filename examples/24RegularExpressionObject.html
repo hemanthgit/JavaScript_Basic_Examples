@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <script>
+        var string = "Tom contact number is 1011011010. His age is 35.";
+        var regexp = new RegExp("\\d+", "g");
+        document.write(string.replace(regexp, "XXX"));
+        // RegExp object properties
+        var regexp1 = new RegExp("\\d+", "gi");
+        document.write("g = " + regexp1.global + "<br/>");
+        document.write("i = " + regexp1.ignoreCase + "<br/>");
+        document.write("m = " + regexp1.multiline + "<br/>");
+        document.write("source = " + regexp1.source + "<br/>");
+        // RegExp object methods
+        var regexp2 = new RegExp("\\d+");
+        document.write(regexp2.exec(string));
+        // To get all the matches
+        var regexp3 = new RegExp("\\d+", "g");
+        var result;
+        while ((result = regexp3.exec(string)) != null) {
+            document.write(result[0] + "<br/>");
+        }
+        //To check if the string contains numbers.
+        var regexp = new RegExp("\\d+", "g");
+        document.write("String contain numbers - " + regexp.test(string));
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+The following are the 3 methods in JavaScript that can be used to retrieve a substring from a given string. 
+    substring()
+    substr() 
+    slice()
+
+substring() :
+  This method has 2 parameters 'start' and 'end'. 
+  'start' parameter is mandatory and specifies the starting position of the extraction. 
+  'end' parameter is optional and specifies the ending positionof the extraction.
+ Note : 1.The character at the end position is not included in the substring.
+        2.If the value of start parameter is greater than the value of the end parameter, this method will swap the two arguments. 
+        This means start will be used as end and end will be used as start.
+
+substr() method : 
+    This method has 2 parameters 'start' and 'count'. 
+    'count' parameter is optional and specifies the number of characters to extract.
+ Note : If the count parameter is not specified, all the remaining characters are extracted.
+        If count is 0 or negative, an empty string is returned.
+
+What is the difference between substr and substring methods ? 
+    The difference is in the second parameter. 
+     The second parameter of substring() method specifies the index position where the extraction should stop.
+     The second parameter of substr() method specifies the number of characters to return.    
+
+indexOf() method:
+    This method returns the position of the first occurrence of a specified value in a string. 
+    If the specified value is not present then -1 is returned.

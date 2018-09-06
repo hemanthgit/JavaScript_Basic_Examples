@@ -1,0 +1,19 @@
+<html>
+
+<body>
+    <script type="text/javascript"> 
+        function Employee(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.getFullName = function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        var employee = new Employee("Varma", "Tech");
+        document.write("FirstName = " + employee.firstName + "<br/>");
+        document.write("LastName = " + employee.lastName + "<br/>");
+        document.write("FullName = " + employee.getFullName() + "<br/>"); 
+    </script>
+</body>
+
+</html>

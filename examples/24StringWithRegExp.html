@@ -1,0 +1,16 @@
+<html>
+
+<body>
+    <script>
+        var string = "Tom contact number is 1011011010. His age is 35.";
+        document.write(string+"</br>");
+        // document.write("<h4>Replacing all numeric values with XXX </h4></br>");
+        // Replace all numeric values with XXX
+        document.write("</br> Replacement --------> "+string.replace(/\d+/g, "XXX"));
+        document.write("</br> Spliting ----------> "+string.split(/\d+/));
+        document.write("</br> Searching --------->"+string.search(/\d+/));
+        document.write("</br> Matching --------->"+string.match(/tom/gi));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+Mouse Events:
+-------------
+
+The commonly used JavaScript mouse events are :
+ 1.mouseover - Occurs when the mouse pointer is moved over an element.
+ 2.mouseout - Occurs when the mouse pointer is moved out of an element.
+ 3.mousemove - Occurs when the mouse pointer is moving while it is over an element.
+ 4.mouseup - Occurs when the mouse button is released over an element.
+ 5.mousedown - Occurs when the mouse button is pressed over an element.
+ 6.click - Occurs when the mouse button is clicked. mousedown, mouseup & click events occur in sequence.
+ 7.dblclick - Occurs when the mouse button is double-clicked. mousedown, mouseup, mousedown, mouseup, click & dblclick events occur in sequence.
+ 8.contextmenu - Occurs when the mouse right button is clicked.mousedown, mouseup & contextmenu events occur in sequence
+

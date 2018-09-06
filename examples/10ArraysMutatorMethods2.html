@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            document.write("---- String Sorting ----</br>");
+            var stringArray = ["Sam","Mark","Tom","David"];
+            stringArray.sort(); 
+            document.write(stringArray + "</br>");
+
+            document.write("---- Number Sorting ----</br>");
+            var numArray = [20, 1 , 10 , 2, 3]; 
+            // numArray.sort(); // Numbers will not be sorted as expected.
+            numArray.sort(function (a, b) { return b - a });
+            // numArray.sort(() =>(b - a)) ;// to do, fix it
+            document.write(numArray + "</br>");
+
+            document.write("---- Reverse  ----</br>");
+            document.write("Reverse "+numArray.reverse()+ "</br>");
+            numArray.forEach(element => {
+               document.write(element + " is in index of "+numArray.indexOf(element) + "</br>");
+            });
+    
+            document.write("Index Of "+numArray.indexOf(2)+ "</br>");
+
+            document.write("---- Splice 1 ----</br>");
+            var spliceArray1 = [1,2,5]; 
+            spliceArray1.splice(2, 0, 3, 4); 
+            document.write(spliceArray1 + "</br>");
+
+            document.write("---- Splice 2 ----</br>");
+            var spliceArray2 = [1,2,55,67,3]; 
+            spliceArray2.splice(2, 2); 
+            document.write(spliceArray2); 
+        </script>
+    </body>
+</html>

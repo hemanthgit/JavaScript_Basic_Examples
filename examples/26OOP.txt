@@ -1,0 +1,34 @@
+JavaScript is object oriented programming language. 
+The following are the 4 pillars of any object oriented programming language.
+    1. Inheritance 
+    2. Encapsulation 
+    3. Abstraction 
+    4. Polymorphism
+
+Objects in JavaScript can be broadly classified into two categories. 
+    1. Standard built-in objects 
+    2. Custom objects
+
+Standard built-in objects : 
+    We have already seen many of the JavaScript standard built-in objects. 
+    Examples :string, array, RegExp, Date etc.
+
+Custom objects :
+----------------
+    In Java to create a custom object, we create a Custom class and then create an instance of a class. 
+    But in JavaScript we don't have classes. Instead we use functions. 
+
+    In JavaScript there are two ways to create a custom object.
+        1. Constructor function 
+        2. Literal notation
+
+    What is the difference between creating an object using constructor function and literal notation?
+     1. In the constructor function the properties and their values separated using an equal-to sign(=) whereas in the literal version, they are separated using a colon (:).
+     2. In constructor function at the end of each property you can have a semi-colons (;) whereas in the literal version properties must be separated with a comma (,) 
+     3. With literal notation you have already created an object, so to access firstName value you simply use employee.firstName. With the constructor function you have to first create an instance and then use the created instance and the property name separated by DOT as shown below.
+
+    Main difference between objects created using object literal and constructor function:
+        Objects created using object literals are singletons. This means when a change is made to the object, it affects that object across the entire script.
+        Object defined with a function constructor lets you have multiple instances of that object. This means change made to one instance, will not affect other instances.
+    So, when to use one over the other? 
+        If you need multiple instances of the object use 'constructor function' where as if you need just one instance of the object then use literal notation.

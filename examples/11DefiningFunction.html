@@ -1,0 +1,39 @@
+<html>
+
+<body>
+    <script>
+      // Anonymous function expression  
+        var add = function (firstNumber, secondNumber) {
+            var result = firstNumber + secondNumber;
+            return result;
+        }
+        var sum = add(10, 20);
+        document.write(sum +"</br>");
+
+       // Named function expression
+       var factorial = function computeFactorial(number) {
+            if (number <= 1) { 
+                return 1; 
+            }
+             return number * computeFactorial(number - 1); 
+        }
+        var result = factorial(5); 
+        document.write(result +"</br>");
+
+        //computeFactorial(5);// It gives error,as we are trying to use 'computeFactorial' outsideof  the function.
+       
+       // Self invoking function expression (IIFE)
+       var result = (function computeFactorial(number) { 
+           if (number <= 1) {
+                return 1; 
+            } 
+            return number * computeFactorial(number - 1);
+            })(5); 
+
+       document.write(result +"</br>");
+
+    </script>
+
+</body>
+
+</html>

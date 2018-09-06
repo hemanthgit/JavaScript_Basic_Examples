@@ -1,0 +1,35 @@
+<html>
+
+<body>
+    <input type="text" value="10" id="txtBox" />
+    <br />
+    <br />
+    <input type="button" value="Start Timer" onclick="startTimer('txtBox')" />
+    <input type="button" value="Stop Timer" onclick="stopTimer()" />
+    <script>
+        var intervalId;
+        function startTimer(controlId) {
+            var control = document.getElementById(controlId);
+            var seconds = control.value;
+            seconds = seconds - 1;
+            if (seconds == 0) {
+                control.value = "Done"; return;
+            }
+            else {
+                control.value = seconds;
+            }
+            intervalId = setTimeout(function () {
+                startTimer('txtBox');
+            }, 1000);
+        }
+        function stopTimer() {
+            clearTimeout(intervalId);
+        }
+    </script>
+</body>
+
+</html>
+<!-- Q) why the startTimer function call had to be wrapped in an anonymous function in the setTimeout parameter?
+A)      setTimeout accepts a function as an argument and the correct way to pass a function as an argument is either defining it as an anonymous function or just providing the function name. 
+        If you use parenthesis (brackets) you aren't actually passing a function, you are executing the function and passing the result of the funciton to setTimeout. 
+        Hence, when specifying a function in setTimeout and anywhere else you need to pass a function as an argument you should not use parenthesis. -->

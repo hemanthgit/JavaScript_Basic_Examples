@@ -1,0 +1,33 @@
+How to open a popup window using JavaScript?
+    use window.open(URL, name, features, replace) method.   
+    All the parameters are optional. 
+    URL - URL of the page to open. 
+        If URL is not specified, a new window with about:blank is opened.
+    name - Specifies the target attribute or the name of the window.
+        _blank - URL is loaded into a new window. This is the default value if not specified.
+        _parent - URL is loaded into the parent frame.
+        _self - URL replaces the current page.
+        _top - URL replaces any framesets that may be loaded.
+    features - Must be a comma-separated list.Some browsers does not support these features.
+        menubar (yes/no) - Shows or hides the browser menu.
+        toolbar (yes/no) - Shows or hides the browser navigation bar.
+        location (yes/no) - Shows or hides the address field.
+        status (yes/no) - Shows or hides the status bar.
+        resizable (yes/no) - Whether or not the window is resizable.
+        scrollbars (yes/no) - Whether or not to display scroll bars.
+        top(pixels) - The top position of the window.
+        left(pixels) - The left position of the window.
+        height (pixels) - The height of the new window.
+        width (pixels) - The width of the new window.
+    replace(yes/no) - Specifies whether the URL creates a new entry or replaces the current entry in the browser history.
+            Note: Works only if the url is loaded into the same window.
+            true - URL replaces the current document in the browser history list.
+            false - URL creates a new entry in the browser history list.
+
+    If No parameters are passed to window.open() method, a new window with about:blank will be opened.
+
+    If you want to open the popup in a new window, one workaround we have found is to specify the URL, name, and features(height and width) parameters. This may not work in all browsers and it also depends on user's browser preferences.
+
+    To close pouup use window.close() method.
+
+        

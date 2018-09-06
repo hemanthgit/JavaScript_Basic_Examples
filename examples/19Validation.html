@@ -1,0 +1,38 @@
+<html>
+
+<body>
+
+    <table>
+        <tr>
+            <td> First Name </td>
+            <td>
+                <input type="text" id="txtFirstName" onkeyup="validateRequiredField('txtFirstName')" onblur="validateRequiredField('txtFirstName')"
+                />
+            </td>
+        </tr>
+        <tr>
+            <td> Last Name </td>
+            <td>
+                <input type="text" id="txtLastName" onkeyup="validateRequiredField('txtLastName')" onblur="validateRequiredField('txtLastName')"
+                />
+            </td>
+        </tr>
+    </table>
+    <script>
+        function validateRequiredField(controlId) {
+            var control = document.getElementById(controlId);
+            control.style.color = 'white';
+            if (control.value == "") {
+                control.style.background = 'red';
+            }
+            else {
+                control.style.background = 'green';
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- onkeyup occurs when the user releases a key. 
+     onblur occurs when an element loses focus. -->

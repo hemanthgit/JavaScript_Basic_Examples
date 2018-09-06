@@ -1,0 +1,62 @@
+Regular Expression:
+-------------------
+What is a Regular Expression?
+ A regular expression is a sequence of characters that forms a search pattern. 
+
+Basics of Regular Expressions:
+------------------------------
+Ex :
+    1. To find the word "expression" as a whole word --> \bexpression\b
+    2. To find a 5 digit number --> \b\d\d\d\d\d\b  
+        Note:\d indicates to find a digit. 
+    3. To avoid the repetition of \d by using curly braces -->
+        \d{5} means repeat \d 5 times.
+    4. Find all the words with exactly 5 letters-- > \b[a-zA-Z]{5}\b
+
+    Brackets are used to find a range of characters 
+        [a-z] - Find any of the characters between the brackets.
+        [0-9] - Find any of the digits between the brackets.This is equivalent to \d. 
+        (a|b) - Find any of the characters a or b.
+    
+    Expresso is one of the free tools available.
+        http://www.ultrapico.com/ExpressoDownload.htm
+    
+    Regular Expression Library:
+        http://regexlib.com
+
+Strings with Regular Expressions:
+---------------------------------
+    In JavaScript regular expressions can be used with the following string methods. 
+        1. match() 
+        2. replace() 
+        3. split() 
+        4. search()
+
+    Along with regular expressions you can use modifiers to specify the kind of search you want to perform.
+     g --> Global search 
+     i --> Case-insensitive search 
+     m --> Multiline search
+
+Reg Expression Object:
+----------------------
+There are 2 ways to create a regular expression in JavaScript
+    1. Using a regular expression literal.
+            ex: var regex = /\d+/g;
+        Regular expressions created using regular expression literals are automatically compiled when the script is loaded. 
+        So if you know that the regular expression is not going to change then use this approach for better performance.
+    2. Using the constructor function of the RegExp object.
+            ex:  var regexp = new RegExp("\\d+", "g");
+        Note: Please note : Since the first argument of the RegExp constructor is a string, you have to escape the backslash.
+        Regular expressions created using the constructor function are compiled at runtime.
+        Use this approach when the regular expression is expected to change.
+    Commonly used RegExp object properties:
+        1.global - returns true if the global modifier (g) is set, otherwise false.
+        2.ignoreCase - returns true if the case-insensitive modifier (i) is set, otherwise false.
+        3.multiline - returns true if the multi-line modifier (m) is set, otherwise false 
+        4.source - Returns the text of the regular expression.
+    Commonly used RegExp object methods:
+        1.exec() - Tests for a match in a given string and returns the first match if found otherwise null.
+        2.test() - Tests for a match in a gievn string and returns true or false.
+        3.toString() - Returns the string value of the regular expression.
+        
+    

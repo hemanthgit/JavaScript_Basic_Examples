@@ -1,0 +1,16 @@
+<html>
+
+<body>
+        <input type="button" value="Click me" id="btn" onclick="clickHandler1()"/>
+    <script>
+        document.getElementById("btn").onclick = clickHandler2;
+        function clickHandler1() {
+            alert("Handler set using HTML attribute");
+        }
+        function clickHandler2() {
+            alert("Handler set using DOM object property");
+        }
+    </script>
+</body>
+
+</html>

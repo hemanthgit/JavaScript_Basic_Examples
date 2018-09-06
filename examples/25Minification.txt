@@ -1,0 +1,19 @@
+What is JavaScript Minification?
+    JavaScript Minification is the process of reducing the script file size by removing comments, extra whitespaces and new line characters that are not needed for executing JavaScript code.
+JavaScript Minification may reduce the size of the file by 30 to 90%. 
+The Minification process will not change its original functionality. 
+
+What are the benefits of JavaScript Minification?
+ The JavaScript files need to be downloaded to the client machine before the browser can execute your JavaScript code. 
+ Since JavaScript Minification reduces the size of the file we have the following benefits 
+    1. Reduced download time 
+    2. Less bandwidth consumption of your website 
+    3. Reduced JavaScript execution time as all the comments, extra whitespaces and new line characters are removed from the minified version 
+    4. Multiple JavaScript files can be compressed into one minified JavaScript file. This means there are now reduced number of HTTP requests to your server, which in turn reduces the load on the server and allows more users to access your website.
+
+What are the disadvantages of JavaScript Minification?
+ Readability is lost and debugging can be difficult as comments, extra whitespaces and new line characters are removed. 
+ However, if there is a production issue, use the non-minified version of the script file for debugging. 
+ So in production environment use minified version for performance and in development environment use non-minified version for readability and debugging.
+
+We have lot of minification tools in internet.

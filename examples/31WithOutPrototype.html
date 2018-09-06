@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <script>
+        function Employee(name) {
+            this.name = name;
+            this.getName = function () {
+                return this.name;
+            }
+        }
+
+        var e1 = new Employee("Varma");
+        var e2 = new Employee("Tech");
+        document.write("e1.name = " + e1.getName() + "<br/>");
+        document.write("e2.name = " + e2.getName() + "<br/>");
+    </script>
+</body>
+
+</html>
+
+<!-- In this approach ,
+        if you create 100 employee objects there will be 100 copies of getName() function. 
+
+    We don't want to be create copies of functions for each object, instead we want all the objects to share the same function code. 
+    This can be achieved using JavaScript prototype object.
+-->

@@ -1,0 +1,46 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        // Push method
+        var myarray = [];
+        document.write("----Push Method---- </br>");
+        for (let i = 0; i <= 5; i++) {
+            myarray.push(i * 2);
+            document.write(myarray);
+            document.write("Array Length: " + myarray.length+"</br>");
+        }
+
+        // Pop method
+        document.write("----Pop Method---- </br>");
+        for (var i = 0; i <= 5; i++) {
+            myarray.pop();
+            document.write(myarray);
+            document.write("Array Length: " + myarray.length +"</br>");
+            
+        }
+
+        //unshift
+        document.write("----unshift Method---- </br>");
+        for (var i = 5; i >= 0; i--) {
+            myarray.unshift(i);
+            document.write(myarray);
+            document.write("Array Length: " + myarray.length +"</br>");
+            
+        }
+
+        //shift
+        document.write("----Shift Method---- </br>");
+        for (var i = 0; i <= 5; i++) {
+            myarray.shift();
+            document.write(myarray);
+            document.write("Array Length: " + myarray.length +"</br>");
+            
+        }
+
+    </script>
+</body>
+
+</html>

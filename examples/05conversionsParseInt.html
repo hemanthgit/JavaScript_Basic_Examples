@@ -1,0 +1,26 @@
+<html>
+
+<head></head>
+
+<body>
+    <form id="form1">
+        First Number:
+        <input type="text" name="firstnum" id="firstnumID"> </br>
+        Second Number:
+        <input type="text" name="secondnum" id="secondnumID"> </br>
+        <input type="button" value="Submit" onclick="add()" /></br>
+
+        <h3>Result :</h3> <input type="text" placeholder="result" id="result"/>
+    </form>
+    <script>
+        function add() {
+            var fnum = parseInt(document.getElementById("firstnumID").value);
+            var snum = parseInt(document.getElementById("secondnumID").value);
+            // alert(fnum + snum); 
+            document.getElementById("result").value = fnum + snum;
+            // If you leave first number and second number textboxes blank or if you enter text instead of a number, 
+            // and when you click the Add button, NaN is displayed in result textbox. 
+            // NaN in JavaScript stands for Not-a-Number.In JavaScript we have isNaN() function which determines whether a value is an illegal number.
+        }
+    </script>
+</body>

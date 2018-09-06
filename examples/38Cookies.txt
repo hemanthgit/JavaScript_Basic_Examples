@@ -1,0 +1,61 @@
+Cookies:
+--------
+Why are cookies needed?
+    Web applications work on HTTP protocol which is a stateless protocol. 
+    This means after the web server has processed the client request for a web page, the web server will not remember anything about the client that made the request. 
+
+What are cookies?
+     Cookies are small text files that a browser stores in the visitor's computer.
+     A cookie is basically a string of name-value pairs separated by semi-colons.
+
+How does a cookie look?
+        color=red; expires=Fri, 31 Aug 2018 01:00:00 UTC;
+    In the cookie string above we have 2 name-value pairs. 
+    "expires" attribute specifies when the cookie is going to expire.
+    By default cookies are deleted when the current browser session ends.
+    If you want to store the cookie on the client computer even after the browser session has ended then specify either expires or max-age attributes. 
+
+How to write a cookie?
+     Use the document object's cookie property to write the cookie. 
+     Ex: document.cookie = "color=red;expires=Fri, 5 Aug 2016 01:00:00 UTC;"
+
+How to read a cookie?
+     Use the document object's cookie property to read the cookie.
+     Ex: var cookieString = document.cookie;
+
+optional cookie attribute values that can be specified when creating a cookie:
+-------------------------
+Optional Cookie Attributes:
+    1.expires 
+    2.max-age 
+    3.domain 
+    4.path 
+    5.secure
+expires and max-age attributes : 
+    If you want to create a persistent cookie, that is a cookie that is not deleted after the browser is closed either use "expires" or "max-age" attributes.
+    Ex: 
+        1. document.cookie = "color=red;expires=Fri, 5 Aug 2016 01:00:00 UTC";
+        2. document.cookie = "color=red;max-age=" + (60 * 60 * 24 * 30) + ";"// Creates a cookie that expires in 30 days
+    
+    What is the difference between expires and max-age attributes?
+        With expires attribute you set an expiry date. Very few modern browsers support this attribute. Internet Explorer is one of them. 
+        With max-age attribute you specify the expiry time in seconds. Most modern browsers support this attribute except Internet Explorer.
+Note : If you want to create a persistent cookie that works in IE and all the other browsers then specify both expires and max-age attributes.
+
+    domain attribute : Specifies the domain for which the cookie is valid. 
+    If you specify the doamin as varmatech.blog.com then that cookie will be valid only for that sub-domain. It will not be valid for varmatech.com. 
+    Note : 
+    If you want a cookie to be valid for all sub-domains of varmatech.com then specify domain=varmatech.com. 
+    So this cookie will be valid for 
+        varmatech.com 
+        blog.varmatech.com 
+        blog.varma.varmatech.com
+    
+    path attribute : 
+        By default cookies are valid only for web pages in the directory of the current web page that stored them, as well as its descendants. 
+            ex: If a cookie is set by http://localhost/Home/Page2.htm, it will be valid for http://localhost/Home/SubFolder/Page1... but not for http://localhost/Page3.htm.
+        If you want to create a cookie that is valid across all your pages in your website, then set the path attribute to the root of your web directory, that is, "/".
+        Ex: document.cookie = "color=red;max-age=" + (60 * 60 * 24 * 30) + ";path=/";
+
+        secure attribute : 
+            secure attribute specifies that the cookie is secure and is only used over HTTPS protocol which ensures that the cookie is always encrypted when transmitting from client to server.

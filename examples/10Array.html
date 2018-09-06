@@ -1,0 +1,45 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        //case 1
+        var emptyArray = [];
+        alert(emptyArray.length);
+
+        //case 2 
+        var array1 = new Array(10);
+        alert(array1.length);
+
+        // Retrieving 
+        var array2 = [10, 20, 30];
+        document.write("First element = " + array2[0] + "<br/>");
+        document.write("Last element = " + array2[array2.length - 1] + "<br/>");
+
+        //Populating
+        var array3 = [];
+        array3[0] = 10;
+        array3[1] = 20;
+        array3[2] = 30;
+        alert(array3);
+
+        // Declaring and Populating
+        var array4 = [10, 20, 30];
+        alert(array4);
+
+        var array5 = new Array(3);
+        array5[0] = 10;
+        array5[1] = 20;
+        array5[2] = 30;
+        array5[3] = 40;// Though the initial size is set to 3, adding a fourth element to the array will not throw an exception, because arrays in JavaScript can grow in size.
+        alert(array5);
+
+        //Declaring and populating the array at the same time using the Array constructor
+        var array6 = new Array(10, 20, 30); 
+        alert(array6);
+        //Note : If only one number is passed to the Array constructor, then that number is used to set the size of the array. If more that one number is passed then those will be used as elements to populate the array.
+    </script>
+</body>
+
+</html>

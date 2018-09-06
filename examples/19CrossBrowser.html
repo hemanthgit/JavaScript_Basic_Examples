@@ -1,0 +1,20 @@
+<html>
+
+<body>
+    <input type="button" value="Click me" id="btn"/>
+    <script>
+        // alert(btn.addEventListener);
+        // alert(btn.attachEvent); // Enable to see the value.
+        if (btn.addEventListener) {
+            btn.addEventListener("click", clickEventHandler);
+        }
+        else {
+            btn.attachEvent("onclick", clickEventHandler);
+        }
+        function clickEventHandler() {
+            alert("Click Handler");
+        }    
+    </script>
+</body>
+
+</html>

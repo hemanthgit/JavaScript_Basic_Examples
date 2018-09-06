@@ -1,0 +1,11 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+        var myArray = ["Sam", "Mark", "Tim", "Sam"]; 
+        var uniqueItems = myArray.filter(function (v, i, a) { return a.indexOf(v) == i }); 
+        document.write(uniqueItems); 
+        </script>
+    </body>
+</html>

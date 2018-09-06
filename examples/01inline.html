@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script type="text/javascript"> 
+        function IsEven() {
+            var number = document.getElementById("firstnameID").value;
+            if (number % 2 == 0) { 
+                alert(number + " is even number");
+             }
+            else {
+                 alert(number + " is odd number"); 
+             }
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form1">
+        Enter Number
+        <input type="text" name="firstname" id="firstnameID"> </br>
+        <input type="button" value="Submit" onclick="IsEven()" />
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<html>
+
+<body>
+    <script>
+        function Employee(name) {
+            this.name = name;
+        }
+        Employee.prototype.getName = function () {
+            return this.name;
+        }
+        var e1 = new Employee("Varma");
+        var e2 = new Employee("Tech");
+        document.write("e1.name = " + e1.getName() + "<br/>");
+        document.write("e2.name = " + e2.getName() + "<br/>"); 
+    </script>
+</body>
+
+</html>

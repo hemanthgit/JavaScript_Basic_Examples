@@ -1,0 +1,33 @@
+Timing Events: 
+--------------
+    In JavaScript a piece of code can be executed at specified time interval.
+    This concept in JavaScript is called timing events. 
+    
+The global window object has the following 2 methods that allow us to execute a piece of JavaScript code at specified time intervals.
+    1. setInterval(func, delay) -
+        a) executes a specified function, repeatedly at specified time interval.
+        b) This method has 2 parameters.
+             func -- specifies the name of the function to execute. 
+             delay -- specifies the time in milliseconds to wait before calling the specified function.
+    2. setTimeout(func, delay) - 
+        a) Executes a specified function, after waiting a specified number of milliseconds.
+        b) This method has 2 parameters. 
+            func -- specifies the name of the function to execute. 
+            delay -- specifies the time in milliseconds to wait before calling the specified function.
+    3. clearInterval(intervalID) - 
+        a) Cancels the repeated execution of the method that was set up using setInterval() method.
+        b)  'intervalID' is the identifier of the repeated action that you want to cancel. 
+                This 'intervalID' is returned from setInterval() method.
+    4. setTimeout() -
+            syntax is similar to setInterval().
+        Note: Main difference between setInterval and setTimeout is setTimeout doesn't allow you to call it more than once whereas setInterval as many as you want.
+    5. clearTimeOut() -
+            syntax is similar to clearInterval().
+
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+    Regarding example 18TimingEvents.html
+    Q) why the startTimer function call had to be wrapped in an anonymous function in the setTimeout parameter?
+    A)  setTimeout accepts a function as an argument and the correct way to pass a function as an argument is either defining it as an anonymous function or just providing the function name. 
+        If you use parenthesis (brackets) you aren't actually passing a function, you are executing the function and passing the result of the funciton to setTimeout. 
+        Hence, when specifying a function in setTimeout and anywhere else you need to pass a function as an argument you should not use parenthesis.
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------       

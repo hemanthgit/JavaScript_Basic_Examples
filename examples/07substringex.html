@@ -1,0 +1,22 @@
+<html>
+
+<head></head>
+
+<body>
+        Email Address:<input type="text" name="emailAddress" id="emailAddressID"> </br>
+        Domain value: <input type="text" name="domain" id="domainID"> </br>
+        Address value: <input type="text" name="address" id="addressID"> </br>
+        <input type="button" value="submit" onclick="getEmailandDomainParts()">
+
+    <script>
+        function getEmailandDomainParts() { 
+            var emailAddress = document.getElementById("emailAddressID").value; 
+            var emailPart = emailAddress.substring(0, emailAddress.indexOf("@"));
+            var domainPart = emailAddress.substring(emailAddress.indexOf("@") + 1); 
+            document.getElementById("domainID").value = emailPart; 
+            document.getElementById("addressID").value = domainPart;
+        }
+    </script>
+</body>
+
+</html>

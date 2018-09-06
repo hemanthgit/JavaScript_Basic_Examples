@@ -1,0 +1,18 @@
+ 
+arguments:
+----------- 
+ 'arguments' object is a local variable available bydefault within all functions.
+  It contains all the function parameters that are passed to the function and can be indexed like an array. 
+  The length property of the arguments object returns the number of arguments passed to the function.
+
+Is it possible to pass any number of arguments to a JavaScript function?
+ Yes, you can pass as many arguments as you want to any function.   
+    All the parameters will be stored in the arguments object.
+
+Note:
+-----
+ 1.The 'arguments' object is available only inside a function body.
+ 2.Attempting to access the arguments object outside a function gives undefined error.
+ 3.Though you can index the arguments object like an array, it is not an array.
+ 4.It does not have any Array properties except length
+ 5.However, you can convert the arguments object to an array.

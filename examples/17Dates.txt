@@ -1,0 +1,20 @@
+Dates:
+------
+ use Date() constructor to create date object.
+ In 2 ways We can create a date object with specific formats: 
+    1. var dateOfBirth = new Date("January 13, 1980 11:20:00");
+    2. var dateOfBirth = new Date(1980, 0, 13, 11, 20, 0, 0);
+                    //new Date(year, month, day, hours, minutes, seconds, milliseconds);
+
+Note : In JavaScript month numbers start from ZERO.
+
+Date object methods :
+------------------------
+    1.getFullYear() - Returns the full year (all the four digits);
+    2.getMonth() - Returns the month number (from 0-11)
+    3.getDate() - Returns the day of the month (from 1-31)
+    4.getDay() - Returns the day number of the week (from 0-6). 0-Sunday
+    5.getHours() - Returns the hour (from 0-23) 
+    6.getMinutes() - Returns the minutes (from 0-59) 
+    7.getSeconds() - Returns the seconds (from 0-59) 
+    8.getMilliseconds() - Returns the milliseconds (from 0-999) 

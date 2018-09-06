@@ -1,0 +1,13 @@
+Where should the script tag be placed in the html?
+    Should it be placed in the body or head section of the page. In general the script tag can be placed either in the head or body section.
+
+Why did the JavaScript did not work in some cases if script tag is in head?
+    JavaScript code is present before the textbox control. By the time the JavaScript code is executed, the textbox is still not loaded into browser DOM (Document Object Model). This is the reason JavaScript can't find the textbox and throws a NULL reference error.
+ 
+ First let's understand what happens when a browser starts loading a web page.
+    1. The browser starts parsing the HTML 2. When the parser encounters a <script> tag that references an external JavaScript file. 
+    2. The parser stops parsing the HTML and the browser makes a request to download the script file. Until the download is complete, the parser is blocked from parsing the rest of the HTML on the page. 
+    3. When the download is complete, that's when the parser will resume to parse the rest of the HTML. This means the page loading is stopped until all the scripts are loaded which affects user experience. 
+ In general, the suggested good practice is to place the <script> tag just before the closing <body> tag, so it doesn't block the HTML parser.
+ 
+ However, modern browsers support async and defer attributes on scripts. These attributes tell the browser it's safe to continue parsing while the scripts are being downloaded. But even with these attributes, from a performance standpoint it is still better to place [script] tag just before closing [body] tag. 

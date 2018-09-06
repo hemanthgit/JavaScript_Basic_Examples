@@ -1,0 +1,24 @@
+<html>
+<!-- Even though only Parent has event handler, if we clicks on child event gets bubbled from Child to parent. -->
+<head>
+    <style type="text/css">
+        .styleClass {
+            display: table-cell;
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="styleClass" onclick="alert('Div click handler')">DIV element
+        <span class="styleClass">Span element
+            <input type="button" value="Click me" />
+        </span>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<html>
+
+<body>
+    <script>
+        function addNumbers(firstNumber, secondNumber) {
+            var returnValue = "Result is : ";
+            function add() {
+                return returnValue + (firstNumber + secondNumber);
+            } 
+            // We removed the parentheses from add(). This will return the inner function expression without executing it. 
+            return add;
+        }
+
+        var result = addNumbers(10, 20);
+        document.write(result); // prints inner function expression.
+        document.write(result()); // executes inner function expression
+    </script>
+</body>
+
+</html>

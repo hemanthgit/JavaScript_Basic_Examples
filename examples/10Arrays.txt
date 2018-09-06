@@ -1,0 +1,59 @@
+Arrays:
+    Arrays are collections and ZERO indexed. 
+    This means the first element is at index ZERO and the last element is at index (arrayObject.length-1).
+    var array6 = new Array(10, 20, 30); 
+        alert(array6);
+        //Note : If only one number is passed to the Array constructor, then that number is used to set the size of the array. If more that one number is passed then those will be used as elements to populate the array.
+    
+    There are several methods that can be used with the array object in JavaScript. 
+    Some methods modify the array object while the others do not. 
+    The methods that modify the array object are called as mutator methods.
+    Mutator methods:
+    ---------------- 
+    1.push() method:
+        This method adds new items to the end of the array. 
+    2.pop() method:
+        This method removes the last element of an array, and returns that element. 
+    3.unshift() method:
+        This method add new items to the beginning of an array.
+    4.shift() Method:
+        shift() method removes the first item of an array, and returns that item.
+        Note: All these four methods changes the lengthof the array.
+    5.sort() method:
+        Sorts the elements of an array. 
+        By default, the sort() method sorts the values by converting them to strings and then comparing those strings.
+        This works well for strings but not for numbers.
+    6.reverse() method :
+        reverses the order of the elements in an array.
+    7.splice() method : 
+        This method is used to add or remove elements from an array.
+            Syntax : array.splice(index,deleteCount,item1,.....,itemX)
+            a) index - Required. Specifies at what position to add or remove items.
+            b) deleteCount - Required. The number of items to be removed. If set to 0, no items will be removed. 
+            c) item1,.....,itemX - Optional. The new item(s) to be added to the array.
+    Non-mutator methods:
+    ---------------------
+     8.indexOf 
+     9.contains
+     10.lastIndexOf 
+
+    filter() method :
+    This method creates a new array and populates that array with all the elements that meet the condition specified in a callback function.
+        Syntax : array.filter(callbackFunction, thisArg)
+        a) callbackFunction - Required. 
+            Function that gets called for each element of the array.
+            If the function returns true, the element is kept otherwise filtered.
+        b) thisArg - Optional. 
+            An object to which the this keyword can refer in the callbackfn function.
+        The filter method calls the callbackfn function one time for each element in the array.
+        If the callback function returns false for all elements of the array, the length of the new array that will be returned is 0.     
+        Callback Function Syntax:
+            function callbackFunction(value, index, array)
+            value--> The value of the element in the array.
+            index--> The index position of the element in the array.
+            array--> The source array object that contains the element.
+
+    Multi-Dimensional Array:
+    ------------------------
+    JavaScript does not have a special syntax for creating multidimensional arrays. 
+    Instead we create an array of arrays.

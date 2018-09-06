@@ -1,0 +1,87 @@
+What is an event?
+An event is a signal from the browser that something has happened.
+ex: 1. When a user clicks on an HTML element, click event occurs .
+    2. When a user moves the mouse over an HTML element, mouseover event occurs.
+
+1. When events occur, we can execute JavaScript code or functions in response to those events.
+2. To do this we need to associate JavaScript code or functions to the events.
+3. The function that executes in response to an event is called event handler.
+
+In JavaScript, there are several ways to associate an event handler to the event
+ 1. Using the attributes of an HTML tag. 
+ 2. Using DOM object property.
+ 3. Using special methods.
+
+ what is DOM?
+   DOM stands for Document Object Model.
+   When a browser loads a web page, the browser creates a Document Object Model of that page. 
+   The HTML DOM is created as a tree of Objects.
+
+JavaScript can be used to access and modify these DOM objects and their properties. 
+    For example, you can add, modify and remove HTML elements and their attributes.
+you can use DOM object properties to assign event handlers to events.
+
+If an event handler is assigned using both, i.e an HTML attribute and DOM object property, 
+then the handler that is assigned using the DOM object property overwrites the one assigned using HTML attribute.
+
+Event Handlers:
+----------------
+Event can be handled using the following special methods:
+ 1.addEventListener  
+ 2.removeEventListener 
+ 3.attachEvent 
+ 4.detachEvent
+
+Note : 
+    1.Internet Explorer 9 (and later versions) & all the other modern browsers support addEventListener() and removeEventListener() methods.
+    2.attachEvent() and detachEvent() methods only work in Internet Explorer 8 and earlier versions.
+Sytnax:
+    1. element.addEventListener(event, handler, phase)
+    2. element.removeEventListener(event, handler, phase)
+    3. element.attachEvent( "on"+event, handler)
+    4. element.detachEvent( "on"+event, handler)
+    Please note : The third parameter phase is usually set to false as it is not used.
+
+    Note : you can assign more than one event handler method to a given event.
+           The order in which handler methods are executed is not defined.
+    
+    Event Object : 
+    ---------------
+        1. Whenever an event (like click, mouseover, mouseout etc) occurs, the relevant data about that event is placed into the event object.
+        2. The event object contains event data like, the X and Y coordinates of the mouse pointer when the event occurred, the HTML element that fired the event, which mouse button is clicked etc.
+        3. The event object is always passed to the event handler method. 
+    ****Obtaining the event object is straightforward. We should have a event handler to handle that event.
+
+    Event Bubbling : 
+    ----------------
+        HTML elements can be nested inside each other.
+        Ex: A button element can be nested inside a span element and the span element inturn can be nested inside a div element.
+                (see attached pic 19EventBubblingEx.png)
+        To enable event bubbling we have set the third parameter (phase) of addEventListener() method to false.
+        The event bubbling process starts with the element that triggered the event and then bubbles up to the containing elements in the hierarchy.
+        Because of event bubbling, when you click on the inner (child) element, the event gets handled by the outer(parent) element handler.
+        When the event gets bubbled, the keyword "this" references the current element to which the event is bubbled.
+
+    Stopping event bubbling : 
+    -------------------------
+        If you don't want the event to be bubbled up, you can stop it. 
+        With Internet Explorer 8 and earlier versions "event.cancelBubble = true". 
+        With Internet Explorer 9 (and later versions) & all the other browsers "event.stopPropagation()".
+
+    Thumbnails: creating image gallery with thumbnails 
+    -----------
+    When you click on the image thumnail, the respective image should be displayed in the main section of the page.
+        
+    Event capturing:
+    ----------------
+        Event capturing is the opposite of event bubbling.
+        With event capuring the event gets captured from the outer most element to innermost element. 
+        Note: In real world event capturing is rarely used.
+        To enable event capturing we have set the third parameter (phase) of addEventListener() method to true.
+        Using addEventListener() method with last argument set to true is the only way to enable event capturing. 
+        Please note : IE8 and earlier versions does not support addEventListener() method. This implies that event capturing is not supported in IE8 and earlier versions.
+        Stopping event capturing : 
+        Stopping event capturing is very similar to stopping event bubbling.
+
+    If you want both even bubbling and capturing to be enabled, then assign handlers 2 times, once with the phase parameter set to false and once with the phase parameter set to true.
+    

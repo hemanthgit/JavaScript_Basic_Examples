@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <!-- Approach 1 -->
+    <a href="https://google.co.in/" onclick="return false">
+        Clicking on the link will not take you to GOOGLE </a> </br></br>
+
+    <!-- Aproach 2 -->
+    <a id="linkElement" href="https://google.co.in/"
+         onclick="preventLinkNavigation(event)"> Clicking on the link will not
+        take you to GOOGLE </a>
+
+    <script type="text/javascript"> 
+        function preventLinkNavigation(event) {
+            event = event || window.event;
+            if (event.preventDefault) {
+                event.preventDefault();
+            }
+            else {
+                event.returnValue = false
+            }
+        } 
+    </script>
+</body>
+
+</html>

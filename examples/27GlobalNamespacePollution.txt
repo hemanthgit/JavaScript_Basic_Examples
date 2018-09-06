@@ -1,0 +1,39 @@
+What is the Problem with global namespace pollution in JavaScript ?
+    Let us say we have 2 software development teams (TeamA & TeamB) working on a large project.
+    TeamA has created a customer constructor function with 2 parameters .
+    TeamB has also created a customer constructor function but with 3 parameters.
+
+    So at this moment we have 2 customer constructor functions with same names.
+    The script get loaded in the order that we specified in the HTML page.
+    So one function got overridden, this is called "GLOBAL NAMESPACE POLLUTION".
+
+    Let's elaborate what we mean by this:
+    -------------------------------------
+        1. window is the Global object in JavaScript
+        2. When TeamA.js script file is loaded, the customer() function in 27BranchA.js file is added to the global namespace.
+        3. When TeamB.js script file is loaded, the customer() function in 27BranchB.js file is added to the global namespace. 
+        4. Since 2 functions with the same name cannot exist in the global namespce, the customer() function in 27BranchB.js overwrites the customer() function in 27BranchA.js. 
+        5. As a result we cannot use the customer() function in 27BranchA.js file.
+        6. In JavaScript if you declare a variable or a function second time, it simply overwrites the one you created earlier. JavaScript does not raise any errors like Java if you redefine a variable or a function.
+
+    Summary:
+    --------
+        JavaScript doesn't support method overloading like Java.
+        Polluting global namespace causes name collision.
+        That's why it is very important not to add everything to the global namespace.
+        If someone else use the same variable or function names it can lead to name collision. 
+
+Note : window is the default namespace in JavaScript.
+
+"Solution for global namespace pollution is 'namespace'".
+----------------------------------------------------------------
+    JavaScript lack namespaces.However we can use objects to create namespaces.
+    
+    1.var vt = vt || {};
+            The above line use the 'vt' object if it is already exists, otherwise create an empty object.
+    2.vt.BranchA = vt.BranchA || {};
+            -- It is nested namespace.
+            -- A nested namespace is a namespace inside another namespace.
+            -- we can define a nested namespace by defining an object inside another object like above.
+    3.vt.BranchA.student = function (-,-) {...}
+            --we are adding student() function to vt.BranchA namespace. 

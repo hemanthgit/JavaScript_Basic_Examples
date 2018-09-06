@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <script type="text/javascript"> 
+        document.getElementById("TextBox1").style.backgroundColor = "red"; 
+    </script>
+</head>
+
+<body>
+    <form id="form1">
+        <input type="text" name="firstname" id="firstnameID"> </br>
+    </form>
+</body>
+
+</html>
+
+<!-- Why did the JavaScript did not work in this case?
+JavaScript code is present before the textbox control. By the time the JavaScript code is executed, the textbox is still
+not loaded into browser DOM (Document Object Model). This is the reason JavaScript can't find the textbox and throws a NULL
+reference error. -->

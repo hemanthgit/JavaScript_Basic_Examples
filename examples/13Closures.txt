@@ -1,0 +1,19 @@
+What is a closure?
+    A closure is an "inner function" that has access to the outer function’s variables in addition to it's own variables and global variables. 
+    The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters.
+    You create a closure by adding a function inside another function.
+    A closure is function inside a function. 
+    These functions, that is the inner and outer functions could be named functions or anonymous functions.
+
+Scenario :
+    Every time we click a button on a web page, we want to increment the click count by 1.
+     There are several ways we can do this.
+    Approach 1: Using a global variable
+    ------------
+        Using a global variable and incrementing it everytime we click the button.
+    Problem: The problem with this approach is that, since clickCount is a global variable any script on the page can accidentally change the variable value.
+    
+    Approach 2: Using a JavaScript closure :
+    -----------
+        see example 13ClosuresEx2.html program.
+        

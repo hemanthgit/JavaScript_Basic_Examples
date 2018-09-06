@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            function addNumbers(firstNumber, secondNumber) { 
+                var result = firstNumber + secondNumber; 
+                return result;
+             } 
+             //Case 1
+             var sum = addNumbers(10, 20);
+             alert(sum); 
+             //Case 2
+             var sum1 = addNumbers(10);
+             alert(sum1); // NaN --Not a Number.
+             //Case 3 
+             var sum2 = addNumbers(10,20,30,40);// extra parameter values are ignored.
+             alert(sum2);
+
+             //Case 4 
+            // The below method doesn't have explicit return statement.
+             function sumNumbers(firstNumber, secondNumber) {
+                 var result = firstNumber + secondNumber; 
+                document.write(result); 
+            } 
+                var sum = sumNumbers(10, 20);
+                alert(sum); // throws 'undefined'
+        </script>
+    </body>
+</html>

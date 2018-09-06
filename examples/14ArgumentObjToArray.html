@@ -1,0 +1,24 @@
+<html>
+
+<body>
+    <script>
+        //Converting JavaScript arguments object to an array
+        function numbers() {
+            var argsArray = Array.prototype.slice.call(arguments);
+            argsArray.sort();
+            document.write(argsArray);
+        }
+        numbers(50, 20, 40);
+
+        //Converting JavaScript arguments object to an array using array literals.
+        function numbers() {
+            var argsArray = [].slice.call(arguments);
+            argsArray.sort();
+            document.write("</br>"+argsArray);
+        }
+        numbers(50, 20, 40);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<html>
+
+<body>
+    <script>
+        // print month
+        var month = new Date(2018, 5, 12, 10, 17, 0, 0).getMonth();
+        document.write("Month -->" + month + "</br>");
+
+        //print day of the month
+        var dayOfMonth = new Date(2018, 5, 12, 10, 17, 0, 0).getDate();
+        document.write("Day of the month -->" + dayOfMonth + "</br>");
+
+        //print day of the week
+        var dayOfWeek = new Date(2018, 5, 12, 10, 17, 0, 0).getDay();
+        document.write("Day of the week-->"+dayOfWeek + "</br>");
+        //2
+        var monthName = getMonthNameFromNumber(new Date(2018, 5, 12, 10, 17, 0, 0).getMonth());
+        document.write(monthName + "</br>");
+
+        function getMonthNameFromNumber(monthNumber) {
+            var monthNames = ["January", "February", "March", "April", "May",
+                "June", "July", "August", "September", "October",
+                "November", "December"];
+            return monthNames[monthNumber];
+        }
+
+        var weekdayName = getWeekDayNameFromNumber(new Date(2018, 5, 12, 10, 17, 0, 0).getDay());
+        document.write(weekdayName + "</br>");
+
+        function getWeekDayNameFromNumber(dayNumber) {
+            var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday",
+                "Thursday", "Friday", "Saturday"];
+            return weekDays[dayNumber];
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<html>
+
+<head></head>
+
+<body>
+    <form id="form1">
+        First Number:
+        <input type="text" name="firstnum" id="firstnumID"> </br>
+        Second Number:
+        <input type="text" name="secondnum" id="secondnumID"> </br>
+        <input type="button" value="Submit" onclick="add()" />
+    </form>
+    <script>
+        function add() {
+            var fnum = document.getElementById("firstnumID").value;
+            var snum = document.getElementById("secondnumID").value;
+            alert(fnum + snum); 
+            // It concatenates. This is because the 'value' property of the textbox is returning the number in a string format. So we need to explicitly do the conversion.
+        }
+    </script>
+</body>

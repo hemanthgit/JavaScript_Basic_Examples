@@ -1,0 +1,7 @@
+Inheritance:
+-------------
+Object oriented programming languages support inheritance. 
+Since JavaScript is also an object oriented programming language, it supports inheritance. 
+In OOP languages like C# and Java to implement inheritance, a class inherits from another class.
+In JavaScript, we don't have the concept of classes, so inheritance in JavaScript is prototype-based
+

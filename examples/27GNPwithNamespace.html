@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="js/BranchAwithNamespace.js"></script>
+    <script type="text/javascript" src="js/BranchBwihNamespace.js"></script>
+</head>
+
+<body>
+    <div id="BranchADiv"></div>
+    <div id="BranchBDiv"></div>
+    <script type="text/javascript"> 
+        document.getElementById("BranchADiv").innerHTML = new vt.BranchA.student("Varma", "Tech").getFullName();
+        document.getElementById("BranchBDiv").innerHTML = new vt.BranchB.student("Varma", "Tech","Institute").getFullName();  
+    </script>
+</body>
+
+</html>
+
+</br> "window" is global namespace.</br>
+In Browser press F12 , go to Console and type "keys(window.vt)".

@@ -1,0 +1,14 @@
+how to prevent browser default action?
+In some situations you may want to prevent these default actions of the browser. 
+    For example: preventing you from right clicking on the page.
+
+how to prevent from right clicking on the page?
+Approach 1:
+-----------
+Using "oncontextmenu" attribute of the body element to disable right click.
+
+Approach 2:
+-----------
+Using the "event object" to disable right click 
+    IE 8 and earlier versions --> event.returnValue = false; 
+    IE 9 & later versions and all other browsers --> event.preventDefault();

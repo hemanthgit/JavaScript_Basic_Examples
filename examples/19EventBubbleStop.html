@@ -1,0 +1,35 @@
+<html>
+<style type="text/css">
+    .divStyle {
+        display: table-cell;
+        border: 5px solid black;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="DIV1" class="divStyle"> DIV 1
+        <div id="DIV2" class="divStyle"> DIV 2
+            <div id="DIV3" class="divStyle"> DIV 3 </div>
+        </div>
+    </div>
+    <script> 
+        var divElements = document.getElementsByTagName('div');
+        for (var i = 0; i < divElements.length; i++) {
+            divElements[i].onclick = function (event) {
+                event = event || window.event;
+                    // window.event for IE8 and below.
+                this.style.borderColor = "red";
+                alert(this.getAttribute("id") + " back ground changed");
+                if(event.stopPropagation){
+                    event.stopPropagation();
+                }
+                else{
+                    event.cancelBubble= true;
+                }
+            }
+        } </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <script>
+        function Shape(shapeName) {
+            // Instance field 
+            this.shapeName = shapeName;
+            // Static Field 
+            Shape.count = ++Shape.count || 1;
+            document.write(Shape.count);
+            // Static method 
+            Shape.showCount = function () {
+                return Shape.count;
+            }
+        }
+        var shape1 = new Shape("Circle");
+        var shape2 = new Shape("Rectangle");
+        var shape3 = new Shape("Triangle");
+        document.write("Shape.Count = " + Shape.showCount());
+    </script>
+</body>
+
+</html>

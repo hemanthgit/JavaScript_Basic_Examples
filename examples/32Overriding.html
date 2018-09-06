@@ -1,0 +1,35 @@
+<html>
+
+<body>
+    <script>
+        function GetEmployeeDetails() {
+            Employee.prototype.getName = function () {
+                return this.name.toUpperCase();
+            }
+            var e1 = new Employee("Varma");
+            var e2 = new Employee("Tech");
+            document.write("e1.name = " + e1.getName() + "<br/>");
+            document.write("e2.name = " + e2.getName() + "<br/>");
+        }
+
+        function Employee(name) {
+            this.name = name;
+        }
+        Employee.prototype.getName = function () {
+            return this.name;
+        }
+
+        GetEmployeeDetails();
+    </script>
+</body>
+
+</html>
+<!-- 
+In this example, all the JavaScript is in the same file, i.e 
+    1. The JavaScript that creates Employee constructor function and getName() function &
+    2. The script that overrides getName() function.
+
+    To get more clarity , create Employee constructor function and getName() function in a separate JavaScript file.
+    see 32Overriding1.hml 
+
+-->

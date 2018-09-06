@@ -1,0 +1,4 @@
+Learn the use of the following functions:
+ 1. parseInt() 
+ 2. parseFloat() 
+ 3. isNan()

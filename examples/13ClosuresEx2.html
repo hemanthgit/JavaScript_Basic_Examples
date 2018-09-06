@@ -1,0 +1,31 @@
+<html>
+
+<body>
+    <input type="button" value="Using Global Var" onclick="alert(++clickCount);" />
+    </br> </br>
+   
+    <input type="button" value="Using Closures" onclick="alert(incrementClickCountwithClosure());" />
+    <!--With out Paranthesis  -->
+    <input type="button" value="Using Closures" onclick="alert(incrementClickCountwithClosure);" />
+
+    <script>
+        //Scenario:  count the number of clicks for a button.
+
+        //Approach 1: using global variables
+        var clickCount = 0;
+        function incrementClickCount() {
+            var clickCount = 0;
+            return ++clickCount;
+        }
+
+        //Approach 2 : Using Closures.
+        var incrementClickCountwithClosure = (function () {
+            var clickCount1 = 0;
+            return function () {
+                return ++clickCount1;
+            }
+        })();
+    </script>
+</body>
+
+</html>

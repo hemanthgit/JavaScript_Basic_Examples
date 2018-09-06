@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <script>
+        var Employee = function (name) {
+            this.name = name;
+        }
+        var PermanentEmployee = function (annualSalary) {
+            this.annualSalary = annualSalary;
+        }
+        var employee = new Employee("Mark");
+        PermanentEmployee.prototype = employee;
+        var pe = new PermanentEmployee(50000);
+        document.write("Employee.name: " + employee.hasOwnProperty('name') + "<br/>");
+        document.write("Employee.annualSalary: " + employee.hasOwnProperty('annualSalary') + "<br/>");
+        document.write("PermanentEmployee.name: " + pe.hasOwnProperty('name') + "<br/>");
+        document.write("PermanentEmployee.annualSalary: " + pe.hasOwnProperty('annualSalary') + "<br/>");
+
+    </script>
+</body>
+
+</html>

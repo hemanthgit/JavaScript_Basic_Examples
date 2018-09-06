@@ -1,0 +1,31 @@
+<html>
+
+<body>
+    <input type="button" value="Mouse OVer Me" id="btn" />
+    <script>
+        // Approach one
+        document.getElementById("btn").onmouseover = changeColorOnMouseOver;
+        document.getElementById("btn").onmouseout = changeColorOnMouseOut;
+
+        function changeColorOnMouseOver() {
+            this.style.background = 'red';
+            this.style.color = 'yellow';
+        }
+        function changeColorOnMouseOut() {
+            this.style.background = 'black';
+            this.style.color = 'white';
+        }
+
+        //approach two. Using Anonymous Function
+        document.getElementById("btn").onmouseover = function () {
+            this.style.background = 'red';
+            this.style.color = 'yellow';
+        }
+        document.getElementById("btn").onmouseout = function () {
+            this.style.background = 'black';
+            this.style.color = 'white';
+        }
+    </script>
+</body>
+
+</html>

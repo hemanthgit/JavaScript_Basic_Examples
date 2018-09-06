@@ -1,0 +1,14 @@
+A string is any text inside quotes. You can use either single or double quotes. 
+    var string1 = "string in double quotes" 
+    var string2 = 'string in single quotes'
+Different functions that are available to manipulate string:
+Concatenating strings : There are 2 options to concatenate strings in JavaScript. 
+    Concatenating strings using + operator.
+    Concatenating strings using concat() method
+    Converting a string to uppercase : Use toUpperCase() method.
+    Converting a string to lowercase : Use toLowerCase() method.
+    Length of string javascript : Use length property.
+    Remove whitespace from both ends of a string : Use trim() method.
+    Replacing strings in javascript : Use replace() method. 
+         (This method does not change the original string.)
+    

@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <div id="staticTimeDiv"></div>
+    <div id="dynamicTimeDiv"></div>
+    <script>
+        //Static time 
+        function getStaticCurrentDateTime() {
+            document.getElementById("staticTimeDiv").innerHTML = new Date();
+        }
+        getStaticCurrentDateTime();
+
+        //Dynamic time
+        setInterval(getDynamicCurrentDateTime, 1000);
+        function getDynamicCurrentDateTime() {
+            document.getElementById("dynamicTimeDiv").innerHTML = new Date();
+        }
+        getDynamicCurrentDateTime();
+    </script>
+</body>
+
+</html>

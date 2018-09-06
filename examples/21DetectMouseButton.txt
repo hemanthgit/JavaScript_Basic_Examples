@@ -1,0 +1,14 @@
+JavaScript to detect which mouse button is clicked:
+----------------------------------------------------
+Depending on the browser, 
+    event.button or event.which properties of the event object are used to determine which mouse button is clicked. 
+
+IE 8 & earlier versions use event.button property 
+    Left Button 1 
+    Middle Button 4 
+    Right Button 2 
+
+IE 9 & later versions and most other W3C compliant browsers use event.which property 
+    Left Button 1 
+    Middle Button 2 
+    Right Button 3
